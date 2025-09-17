@@ -1,38 +1,38 @@
-pub mod bead_sort;
-pub mod binary_insertion_sort;
-pub mod bingo_sort;
-pub mod bitonic_sort;
-pub mod bogo_sort;
-pub mod bubble_sort;
-pub mod bucket_sort;
-pub mod cocktail_shaker_sort;
-pub mod comb_sort;
-pub mod counting_sort;
-pub mod cycle_sort;
-pub mod dutch_national_flag_sort;
-pub mod exchange_sort;
-pub mod gnome_sort;
-pub mod heap_sort;
-pub mod insertion_sort;
-pub mod intro_sort;
-pub mod merge_sort;
-pub mod odd_even_sort;
-pub mod pancake_sort;
-pub mod patience_sort;
-pub mod pigeonhole_sort;
-pub mod quick_sort;
-pub mod quick_sort_3_ways;
-pub mod radix_sort;
-pub mod selection_sort;
-pub mod shell_sort;
-pub mod sleep_sort;
+mod bead_sort;
+mod binary_insertion_sort;
+mod bingo_sort;
+mod bitonic_sort;
+mod bogo_sort;
+mod bubble_sort;
+mod bucket_sort;
+mod cocktail_shaker_sort;
+mod comb_sort;
+mod counting_sort;
+mod cycle_sort;
+mod dutch_national_flag_sort;
+mod exchange_sort;
+mod gnome_sort;
+mod heap_sort;
+mod insertion_sort;
+mod intro_sort;
+mod merge_sort;
+mod odd_even_sort;
+mod pancake_sort;
+mod patience_sort;
+mod pigeonhole_sort;
+mod quick_sort;
+mod quick_sort_3_ways;
+mod radix_sort;
+mod selection_sort;
+mod shell_sort;
+mod sleep_sort;
 #[cfg(test)]
-pub mod sort_utils;
-pub mod stooge_sort;
-pub mod tim_sort;
-pub mod tree_sort;
-pub mod wave_sort;
-pub mod wiggle_sort;
+mod sort_utils;
+mod stooge_sort;
+mod tim_sort;
+mod tree_sort;
+mod wave_sort;
+mod wiggle_sort;
 
 pub use self::bead_sort::bead_sort;
 pub use self::binary_insertion_sort::binary_insertion_sort;
@@ -112,7 +112,7 @@ where
 }
 
 #[cfg(test)]
-pub mod tests {
+mod tests {
     #[test]
     fn is_sorted() {
         use super::*;

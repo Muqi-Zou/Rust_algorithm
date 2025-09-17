@@ -1,8 +1,8 @@
 #![cfg(feature = "big-math")]
 
-pub mod fast_factorial;
-pub mod multiply;
-pub mod poly1305;
+mod fast_factorial;
+mod multiply;
+mod poly1305;
 
 pub use self::fast_factorial::fast_factorial;
 pub use self::multiply::multiply;

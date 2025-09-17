@@ -1,13 +1,13 @@
-pub(crate) mod convex_hull;
-pub(crate) mod fisher_yates_shuffle;
-pub(crate) mod genetic;
-pub(crate) mod hanoi;
-pub(crate) mod huffman_encoding;
-pub(crate) mod kadane_algorithm;
-pub(crate) mod kmeans;
-pub(crate) mod mex;
-pub(crate) mod permutations;
-pub(crate) mod two_sum;
+mod convex_hull;
+mod fisher_yates_shuffle;
+mod genetic;
+mod hanoi;
+mod huffman_encoding;
+mod kadane_algorithm;
+mod kmeans;
+mod mex;
+mod permutations;
+mod two_sum;
 
 pub use self::convex_hull::convex_hull_graham;
 pub use self::fisher_yates_shuffle::fisher_yates_shuffle;

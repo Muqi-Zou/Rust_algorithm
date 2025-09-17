@@ -1,10 +1,10 @@
-pub(crate) mod closest_points;
-pub(crate) mod graham_scan;
-pub(crate) mod jarvis_scan;
-pub(crate) mod point;
-pub(crate) mod polygon_points;
-pub(crate) mod ramer_douglas_peucker;
-pub(crate) mod segment;
+mod closest_points;
+mod graham_scan;
+mod jarvis_scan;
+mod point;
+mod polygon_points;
+mod ramer_douglas_peucker;
+mod segment;
 
 pub use self::closest_points::closest_points;
 pub use self::graham_scan::graham_scan;

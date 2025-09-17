@@ -30,8 +30,8 @@ fn round(value: f64) -> f64 {
     (value * 100.0).round() / 100.0
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     macro_rules! test_present_value {

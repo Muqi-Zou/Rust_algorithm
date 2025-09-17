@@ -57,7 +57,7 @@ fn factorize_duval(s: &[char]) -> Vec<String> {
     factors
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
+#[cfg(test)]
 mod test {
     use super::*;
 

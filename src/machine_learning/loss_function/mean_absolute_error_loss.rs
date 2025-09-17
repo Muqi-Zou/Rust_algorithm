@@ -23,8 +23,8 @@ pub fn mae_loss(predicted: &[f64], actual: &[f64]) -> f64 {
     total_loss / (predicted.len() as f64)
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

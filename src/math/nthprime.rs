@@ -48,8 +48,8 @@ fn count_prime(primes: Vec<u64>, n: u64) -> Option<u64> {
     None
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
     #[test]
     fn my_test() {

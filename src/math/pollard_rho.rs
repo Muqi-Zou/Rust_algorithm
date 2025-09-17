@@ -195,7 +195,7 @@ pub fn pollard_rho_factorize(
     result
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
+#[cfg(test)]
 mod test {
     use super::super::LinearSieve;
     use super::*;

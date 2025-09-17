@@ -232,7 +232,7 @@ impl Iterator for VebTreeIter<'_> {
     }
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
+#[cfg(test)]
 mod test {
     use super::VebTree;
     use rand::{rngs::StdRng, Rng, SeedableRng};

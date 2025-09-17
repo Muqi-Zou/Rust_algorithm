@@ -22,7 +22,7 @@ pub fn shell_sort<T: Ord + Copy>(values: &mut [T]) {
     }
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
+#[cfg(test)]
 mod test {
     use super::shell_sort;
     use crate::sorting::have_same_elements;

@@ -120,8 +120,8 @@ pub fn decode(string: &str) -> Result<String, io::Error> {
     Ok(partitions.join(" "))
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

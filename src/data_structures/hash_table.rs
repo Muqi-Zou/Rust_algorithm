@@ -63,8 +63,8 @@ impl<K: Hashable + std::cmp::PartialEq, V> HashTable<K, V> {
     }
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[derive(Debug, PartialEq, Eq)]

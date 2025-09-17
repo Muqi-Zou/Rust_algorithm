@@ -164,8 +164,8 @@ pub fn find_hamiltonian_cycle(
     Graph::new(adjacency_matrix)?.find_hamiltonian_cycle(start_vertex)
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     macro_rules! hamiltonian_cycle_tests {

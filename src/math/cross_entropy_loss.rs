@@ -24,8 +24,8 @@ pub fn cross_entropy_loss(actual: &[f64], predicted: &[f64]) -> f64 {
     loss.iter().sum()
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

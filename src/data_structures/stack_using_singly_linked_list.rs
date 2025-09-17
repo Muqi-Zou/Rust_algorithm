@@ -162,7 +162,7 @@ impl<'a, T> Iterator for IterMut<'a, T> {
     }
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
+#[cfg(test)]
 mod test_stack {
 
     use super::*;

@@ -41,8 +41,8 @@ pub fn maximal_square(matrix: &mut [Vec<i32>]) -> i32 {
     result * result
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

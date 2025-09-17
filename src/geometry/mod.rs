@@ -1,10 +1,10 @@
-pub mod closest_points;
-pub mod graham_scan;
-pub mod jarvis_scan;
-pub mod point;
-pub mod polygon_points;
-pub mod ramer_douglas_peucker;
-pub mod segment;
+mod closest_points;
+mod graham_scan;
+mod jarvis_scan;
+mod point;
+mod polygon_points;
+mod ramer_douglas_peucker;
+mod segment;
 
 pub use self::closest_points::closest_points;
 pub use self::graham_scan::graham_scan;

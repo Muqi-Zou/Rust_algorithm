@@ -61,8 +61,8 @@ pub fn is_lipogram(
     Ok(missing == *missing_chars)
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     macro_rules! test_lipogram {

@@ -27,8 +27,8 @@ pub fn is_palindrome(s: &str) -> bool {
     true
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     macro_rules! palindrome_tests {

@@ -100,7 +100,7 @@ pub fn bell_number(n: u32) -> BigUint {
     new_bell_number
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
+#[cfg(test)]
 pub mod tests {
     use super::*;
     use std::str::FromStr;

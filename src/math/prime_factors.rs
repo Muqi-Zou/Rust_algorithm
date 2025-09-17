@@ -21,8 +21,8 @@ pub fn prime_factors(n: u64) -> Vec<u64> {
     factors
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
     #[test]
     fn it_works() {

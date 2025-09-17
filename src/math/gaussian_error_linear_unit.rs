@@ -35,8 +35,8 @@ pub fn gaussian_error_linear_unit(vector: &Vec<f64>) -> Vec<f64> {
     gelu_vec
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

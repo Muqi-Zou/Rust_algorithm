@@ -64,8 +64,8 @@ pub fn minimum_cost_path(matrix: Vec<Vec<usize>>) -> Result<usize, MatrixError> 
     Ok(cost[matrix[0].len() - 1])
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     macro_rules! minimum_cost_path_tests {

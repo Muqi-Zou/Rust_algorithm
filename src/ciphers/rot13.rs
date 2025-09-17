@@ -10,7 +10,7 @@ pub fn rot13(text: &str) -> String {
         .collect()
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
+#[cfg(test)]
 mod test {
     use super::*;
 

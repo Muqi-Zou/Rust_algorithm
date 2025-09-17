@@ -32,8 +32,8 @@ pub fn get_nth_frizzy(base: i32, mut n: i32) -> f64 {
     final1
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

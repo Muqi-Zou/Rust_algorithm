@@ -229,8 +229,8 @@ where
     }
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use std::convert::TryInto;
 
     use super::LinkedList;

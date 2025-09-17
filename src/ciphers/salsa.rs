@@ -78,8 +78,8 @@ pub fn salsa20(input: &[u32; 16], output: &mut [u32; 16]) {
     }
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
     use std::fmt::Write;
 

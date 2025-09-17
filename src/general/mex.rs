@@ -35,8 +35,8 @@ pub fn mex_using_sort(arr: &[i64]) -> i64 {
     mex
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
     struct MexTests {
         test_arrays: Vec<Vec<i64>>,

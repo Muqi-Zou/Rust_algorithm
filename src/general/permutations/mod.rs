@@ -1,13 +1,13 @@
-pub mod heap;
-pub mod naive;
-pub mod steinhaus_johnson_trotter;
+mod heap;
+mod naive;
+mod steinhaus_johnson_trotter;
 
 pub use self::heap::heap_permute;
 pub use self::naive::{permute, permute_unique};
 pub use self::steinhaus_johnson_trotter::steinhaus_johnson_trotter_permute;
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub mod tests {
+#[cfg(test)]
+mod tests {
     use quickcheck::{Arbitrary, Gen};
     use std::collections::HashMap;
 

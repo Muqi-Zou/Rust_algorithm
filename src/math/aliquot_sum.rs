@@ -14,8 +14,8 @@ pub fn aliquot_sum(number: u64) -> u64 {
     (1..=number / 2).filter(|&d| number % d == 0).sum()
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     macro_rules! test_aliquot_sum {

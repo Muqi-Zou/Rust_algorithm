@@ -59,8 +59,8 @@ pub fn infix_to_postfix(infix: &str) -> Result<String, InfixToPostfixError> {
     Ok(postfix)
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     macro_rules! test_infix_to_postfix {

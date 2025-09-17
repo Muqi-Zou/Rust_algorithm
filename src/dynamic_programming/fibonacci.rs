@@ -276,8 +276,8 @@ pub fn last_digit_of_the_sum_of_nth_fibonacci_number(n: i64) -> i64 {
     fib[n] % 10 - 1
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::binary_lifting_fibonacci;
     use super::classical_fibonacci;
     use super::fibonacci;

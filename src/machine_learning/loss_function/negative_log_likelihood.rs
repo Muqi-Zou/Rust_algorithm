@@ -54,8 +54,8 @@ fn are_all_values_in_range(values: &[f64]) -> bool {
     values.iter().all(|&x| (0.0..=1.0).contains(&x))
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     macro_rules! test_with_wrong_inputs {

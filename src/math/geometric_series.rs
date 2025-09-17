@@ -14,8 +14,8 @@ pub fn geometric_series(nth_term: f64, start_term_a: f64, common_ratio_r: f64) -
     series
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     fn assert_approx_eq(a: f64, b: f64) {

@@ -15,8 +15,8 @@ pub fn kth_factor(n: i32, k: i32) -> i32 {
     -1
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

@@ -100,7 +100,7 @@ macro_rules! impl_kmeans {
 impl_kmeans!(f64, f64);
 impl_kmeans!(f32, f32);
 
-#[cfg(any(test, feature = "bin-tests"))]
+#[cfg(test)]
 mod test {
     use self::super::f64::kmeans;
 

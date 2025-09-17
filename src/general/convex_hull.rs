@@ -64,8 +64,8 @@ pub fn convex_hull_graham(pts: &[(f64, f64)]) -> Vec<(f64, f64)> {
     stack
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

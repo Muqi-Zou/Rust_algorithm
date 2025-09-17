@@ -142,8 +142,8 @@ fn retrieve_knapsack_items(
     }
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     macro_rules! knapsack_tests {

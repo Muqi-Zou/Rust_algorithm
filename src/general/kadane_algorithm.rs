@@ -35,8 +35,8 @@ pub fn max_sub_array(nums: Vec<i32>) -> i32 {
     max_global
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     /**

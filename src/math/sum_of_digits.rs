@@ -52,8 +52,8 @@ pub fn sum_digits_recursive(num: i32) -> u32 {
     num % 10 + sum_digits_recursive((num / 10) as i32)
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     mod iterative {
         // import relevant sum_digits function
         use super::super::sum_digits_iterative as sum_digits;

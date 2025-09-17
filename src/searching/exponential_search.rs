@@ -27,8 +27,8 @@ pub fn exponential_search<T: Ord>(item: &T, arr: &[T]) -> Option<usize> {
     None
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

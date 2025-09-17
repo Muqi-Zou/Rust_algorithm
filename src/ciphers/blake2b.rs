@@ -205,7 +205,7 @@ pub fn blake2b(m: &[u8], k: &[u8], nn: u8) -> Vec<u8> {
     blake2(blocks, m.len() as u128, kk as u64, nn as Word)
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
+#[cfg(test)]
 mod test {
     use super::*;
 

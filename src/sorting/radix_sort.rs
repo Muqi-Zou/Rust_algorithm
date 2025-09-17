@@ -34,8 +34,8 @@ pub fn radix_sort(arr: &mut [u64]) {
     }
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::radix_sort;
     use crate::sorting::have_same_elements;
     use crate::sorting::is_sorted;

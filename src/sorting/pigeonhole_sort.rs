@@ -21,8 +21,8 @@ pub fn pigeonhole_sort(array: &mut [i32]) {
     }
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::super::is_sorted;
     use super::*;
 

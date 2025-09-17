@@ -15,8 +15,8 @@ pub fn euclidean_distance(vector_1: &Vector, vector_2: &Vector) -> f64 {
 
 type Vector = Vec<f64>;
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     // Define a test function for the euclidean_distance function.

@@ -10,8 +10,8 @@ pub fn ceil(x: f64) -> f64 {
     }
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

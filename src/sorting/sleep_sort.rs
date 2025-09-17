@@ -22,8 +22,8 @@ pub fn sleep_sort(vec: &[usize]) -> Vec<usize> {
     sorted_list
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

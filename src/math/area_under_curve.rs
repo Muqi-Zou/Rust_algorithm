@@ -21,7 +21,7 @@ pub fn area_under_curve(start: f64, end: f64, func: fn(f64) -> f64, step_count: 
     area
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
+#[cfg(test)]
 mod test {
     use super::*;
 

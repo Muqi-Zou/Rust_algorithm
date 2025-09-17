@@ -27,8 +27,8 @@ pub fn perfect_cube_binary_search(n: i64) -> bool {
     false
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     macro_rules! test_perfect_cube {

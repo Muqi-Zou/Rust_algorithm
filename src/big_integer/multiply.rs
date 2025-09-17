@@ -29,8 +29,8 @@ pub fn is_valid_nonnegative(num: &str) -> bool {
     num.chars().all(char::is_numeric) && !num.is_empty() && (!num.starts_with('0') || num == "0")
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
     macro_rules! test_multiply {
         ($($name:ident: $inputs:expr,)*) => {

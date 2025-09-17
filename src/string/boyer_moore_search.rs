@@ -124,8 +124,8 @@ pub fn boyer_moore_search(text: &str, pat: &str) -> Vec<usize> {
     positions
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     macro_rules! boyer_moore_tests {

@@ -12,8 +12,8 @@ pub fn sum_of_geometric_progression(first_term: f64, common_ratio: f64, num_of_t
     (first_term / (1.0 - common_ratio)) * (1.0 - common_ratio.powi(num_of_terms))
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     macro_rules! test_sum_of_geometric_progression {

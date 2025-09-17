@@ -218,7 +218,7 @@ impl<T: Ord> TreapNode<T> {
         };
     }
 
-    #[cfg(any(test, feature = "bin-tests"))]
+    #[cfg(test)]
     fn is_valid(&self) -> bool {
         self.priority >= self.priority(Side::Left) && self.priority >= self.priority(Side::Right)
     }
@@ -294,8 +294,8 @@ impl<'a, T: Ord> Iterator for Iter<'a, T> {
     }
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::Treap;
 
     /// Returns `true` if all nodes in the tree are valid.

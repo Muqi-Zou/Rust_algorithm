@@ -61,8 +61,8 @@ impl<T> Default for Queue<T> {
     }
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::Queue;
 
     #[test]

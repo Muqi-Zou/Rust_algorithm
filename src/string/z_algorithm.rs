@@ -139,8 +139,8 @@ pub fn match_pattern<T: Eq>(input: &[T], pattern: &[T]) -> Vec<usize> {
     match_with_z_array(input, pattern, 0, true)
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     macro_rules! test_match_pattern {

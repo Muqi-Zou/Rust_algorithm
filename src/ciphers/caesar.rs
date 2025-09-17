@@ -57,8 +57,8 @@ fn shift_char(c: char, rotation: isize) -> char {
     (((c as u8 - first) + rotation) % ALPHABET_LENGTH + first) as char
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     macro_rules! test_caesar_happy_path {

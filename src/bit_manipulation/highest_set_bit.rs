@@ -26,8 +26,8 @@ pub fn find_highest_set_bit(num: usize) -> Option<usize> {
     Some(position - 1)
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     macro_rules! test_find_highest_set_bit {

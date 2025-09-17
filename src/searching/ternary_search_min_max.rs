@@ -50,8 +50,8 @@ pub fn ternary_search_min(
     f(start)
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

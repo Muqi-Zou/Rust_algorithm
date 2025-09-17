@@ -38,7 +38,7 @@ pub fn gradient_descent(
     x
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
+#[cfg(test)]
 mod test {
     use super::*;
 

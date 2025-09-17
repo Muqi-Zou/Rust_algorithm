@@ -27,8 +27,8 @@ pub fn pascal_triangle(num_rows: i32) -> Vec<Vec<i32>> {
     ans
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::pascal_triangle;
 
     #[test]

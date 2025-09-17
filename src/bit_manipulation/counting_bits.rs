@@ -28,7 +28,8 @@ pub fn count_set_bits(mut n: usize) -> usize {
     count
 }
 
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     macro_rules! test_count_set_bits {

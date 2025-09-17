@@ -22,8 +22,8 @@ pub fn binary_exponentiation(mut n: u64, mut p: u32) -> u64 {
     result_pow
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

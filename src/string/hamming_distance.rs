@@ -21,8 +21,8 @@ pub fn hamming_distance(string_a: &str, string_b: &str) -> Result<usize, Hamming
     Ok(distance)
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     macro_rules! test_hamming_distance {

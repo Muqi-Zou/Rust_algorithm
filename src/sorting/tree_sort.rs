@@ -73,8 +73,8 @@ pub fn tree_sort<T: Ord + Clone>(arr: &mut Vec<T>) {
     *arr = result;
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

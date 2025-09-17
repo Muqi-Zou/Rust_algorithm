@@ -315,8 +315,8 @@ sha3!(sha3_256, 256);
 sha3!(sha3_384, 384);
 sha3!(sha3_512, 512);
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     macro_rules! digest_test {

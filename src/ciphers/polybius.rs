@@ -81,8 +81,8 @@ pub fn decode_ascii(string: &str) -> String {
         .replace(' ', "")
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::{decode_ascii, encode_ascii};
 
     #[test]

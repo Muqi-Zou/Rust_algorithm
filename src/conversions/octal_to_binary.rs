@@ -33,8 +33,8 @@ pub fn octal_to_binary(octal_str: &str) -> Result<String, &'static str> {
     Ok(binary)
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

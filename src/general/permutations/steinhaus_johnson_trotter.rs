@@ -24,8 +24,8 @@ pub fn steinhaus_johnson_trotter_permute<T: Clone>(array: &[T]) -> Vec<Vec<T>> {
     res
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use quickcheck_macros::quickcheck;
 
     use crate::general::permutations::steinhaus_johnson_trotter::steinhaus_johnson_trotter_permute;

@@ -216,7 +216,7 @@ impl<T: MatrixElement> From<Vec<Vec<T>>> for Matrix<T> {
     }
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
+#[cfg(test)]
 // rustfmt skipped to prevent unformatting matrix definitions to a single line
 #[rustfmt::skip] 
 mod tests {

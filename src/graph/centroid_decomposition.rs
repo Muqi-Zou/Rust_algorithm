@@ -102,8 +102,8 @@ impl CentroidDecomposition {
     }
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::CentroidDecomposition;
     use crate::{
         graph::{enumerate_graph, prufer_code},

@@ -22,8 +22,8 @@ pub fn prime_numbers(max: usize) -> Vec<usize> {
     result
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

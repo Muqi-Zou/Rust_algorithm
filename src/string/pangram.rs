@@ -54,8 +54,8 @@ pub fn is_pangram(pangram_str: &str) -> PangramStatus {
     }
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     macro_rules! pangram_tests {

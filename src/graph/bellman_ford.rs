@@ -84,8 +84,8 @@ pub fn bellman_ford<
     Some(ans)
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::{bellman_ford, Graph};
     use std::collections::BTreeMap;
 

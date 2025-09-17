@@ -83,8 +83,8 @@ pub fn compute_prefix_match(original: &[char], reversed: &[char], suffix: &[usiz
     match_table
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
     use crate::string::is_palindrome;
 

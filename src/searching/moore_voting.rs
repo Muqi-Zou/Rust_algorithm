@@ -66,8 +66,8 @@ pub fn moore_voting(arr: &[i32]) -> i32 {
     }
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

@@ -61,8 +61,8 @@ pub fn optimal_search_tree(freq: &[i32]) -> i32 {
     dp[0][n - 1]
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     // Macro to generate multiple test cases for the optimal_search_tree function

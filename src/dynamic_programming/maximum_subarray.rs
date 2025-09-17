@@ -43,8 +43,8 @@ pub fn maximum_subarray(array: &[isize]) -> Result<isize, MaximumSubarrayError> 
     Ok(max_sum)
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     macro_rules! maximum_subarray_tests {

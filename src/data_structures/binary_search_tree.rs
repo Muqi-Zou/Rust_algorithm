@@ -221,7 +221,7 @@ where
     }
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
+#[cfg(test)]
 mod test {
     use super::BinarySearchTree;
 

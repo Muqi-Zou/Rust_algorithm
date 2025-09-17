@@ -168,8 +168,8 @@ impl HuffmanEncoding {
     }
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
     fn get_frequency(bytes: &[u8]) -> Vec<(u8, u64)> {
         let mut cnts: Vec<u64> = vec![0; 256];

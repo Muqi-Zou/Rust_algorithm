@@ -34,8 +34,8 @@ pub fn hexadecimal_to_binary(hex_str: &str) -> Result<String, String> {
     Ok(binary)
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

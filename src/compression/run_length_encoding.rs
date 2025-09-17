@@ -25,7 +25,7 @@ pub fn run_length_decode(encoded: &[(char, i32)]) -> String {
     res
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
+#[cfg(test)]
 mod test {
     use super::*;
 

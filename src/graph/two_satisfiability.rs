@@ -44,8 +44,8 @@ pub fn solve_two_satisfiability(
     Ok(result)
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use std::thread;
 
     use super::*;

@@ -19,8 +19,8 @@ pub fn factors(number: u64) -> Vec<u64> {
     factors
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

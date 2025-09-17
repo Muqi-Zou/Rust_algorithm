@@ -27,8 +27,8 @@ pub fn wiggle_sort(nums: &mut Vec<i32>) -> &mut Vec<i32> {
     nums
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
     use crate::sorting::have_same_elements;
 

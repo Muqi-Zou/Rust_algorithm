@@ -32,8 +32,8 @@ pub fn factorial_bigmath(num: u32) -> BigUint {
 }
 
 // Module for tests
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     // Test cases for the iterative factorial function

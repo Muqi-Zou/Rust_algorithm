@@ -30,8 +30,8 @@ pub fn compound_interest(principal: f64, annual_rate: f64, years: f64, period: O
     value
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
     #[test]
     fn test_simple() {

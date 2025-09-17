@@ -33,8 +33,8 @@ pub fn bead_sort(a: &mut [usize]) {
     }
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
     use crate::sorting::have_same_elements;
     use crate::sorting::is_sorted;

@@ -83,8 +83,8 @@ pub fn generate_suffix_array(txt: &str) -> Vec<usize> {
     suffix_arr
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

@@ -33,8 +33,8 @@ pub fn longest_common_substring(s1: &str, s2: &str) -> usize {
     max_len
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     macro_rules! test_longest_common_substring {

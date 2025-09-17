@@ -15,8 +15,8 @@ pub fn hexadecimal_to_decimal(hexadecimal_str: &str) -> Result<u64, &'static str
     }
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

@@ -72,8 +72,8 @@ pub fn tarjan_scc(graph: &Graph) -> Vec<Vec<usize>> {
     state.components
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

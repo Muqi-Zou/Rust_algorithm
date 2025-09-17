@@ -26,8 +26,8 @@ pub fn rod_cut(prices: &[usize]) -> usize {
     })[prices.len()]
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     macro_rules! rod_cut_tests {

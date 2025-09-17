@@ -69,7 +69,7 @@ pub fn k_means(data_points: Vec<(f64, f64)>, n_clusters: usize, max_iter: i32) -
     Some(labels)
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
+#[cfg(test)]
 mod test {
     use super::*;
 

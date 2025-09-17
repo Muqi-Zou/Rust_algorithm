@@ -30,8 +30,8 @@ pub fn init_catalan() -> Vec<i64> {
     catalan
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

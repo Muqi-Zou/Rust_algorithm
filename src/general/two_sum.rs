@@ -44,7 +44,7 @@ pub fn two_sum(nums: Vec<i32>, target: i32) -> Option<(usize, usize)> {
     None
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
+#[cfg(test)]
 mod test {
     use super::*;
 

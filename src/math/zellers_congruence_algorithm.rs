@@ -39,8 +39,8 @@ fn number_to_day(number: i32) -> String {
     String::from(days[number as usize])
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
     #[test]
     fn it_works() {

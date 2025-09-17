@@ -32,8 +32,8 @@ pub fn amicable_pairs_under_n(n: u32) -> Option<Vec<(u32, u32)>> {
     }
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

@@ -24,8 +24,8 @@ pub fn wave_sort<T: Ord>(arr: &mut [T]) {
     }
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

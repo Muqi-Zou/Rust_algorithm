@@ -38,8 +38,8 @@ pub fn inv_burrows_wheeler_transform<T: AsRef<str>>(input: (T, usize)) -> String
     decoded
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

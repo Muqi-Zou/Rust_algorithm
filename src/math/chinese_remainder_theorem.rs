@@ -21,8 +21,8 @@ pub fn chinese_remainder_theorem(residues: &[i32], modulli: &[i32]) -> Option<i3
     Some(sum % prod)
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

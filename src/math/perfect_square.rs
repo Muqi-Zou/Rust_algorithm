@@ -31,8 +31,8 @@ pub fn perfect_square_binary_search(n: i32) -> bool {
     false
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     #[test]

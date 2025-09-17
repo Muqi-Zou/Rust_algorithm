@@ -16,8 +16,8 @@ pub fn combinations(n: i64, k: i64) -> i64 {
     res
 }
 
-#[cfg(any(test, feature = "bin-tests"))]
-pub(crate) mod tests {
+#[cfg(test)]
+mod tests {
     use super::*;
 
     // Test case for combinations(10, 5)

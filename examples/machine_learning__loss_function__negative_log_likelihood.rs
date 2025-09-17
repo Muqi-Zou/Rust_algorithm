@@ -1,0 +1,11 @@
+#![allow(dead_code)]
+#![allow(unused_imports)]
+#![allow(clippy::all)]
+
+#[path = "src/lib.rs"]
+mod source;
+
+pub use source::*;
+use source::machine_learning::loss_function::negative_log_likelihood as target_module;
+
+fn main() {}

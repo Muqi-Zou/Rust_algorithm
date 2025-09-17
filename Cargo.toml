@@ -9,14 +9,13 @@ num-bigint = { version = "0.4", optional = true }
 num-traits = { version = "0.2", optional = true }
 rand = "0.9"
 nalgebra = "0.34.0"
-
-[dev-dependencies]
-quickcheck = "1.0"
-quickcheck_macros = "1.0"
+quickcheck = { version = "1.0", optional = true }
+quickcheck_macros = { version = "1.0", optional = true }
 
 [features]
-default = ["big-math"]
+default = ["big-math", "bin-tests"]
 big-math = ["dep:num-bigint", "dep:num-traits"]
+bin-tests = ["dep:quickcheck", "dep:quickcheck_macros"]
 
 [lints.clippy]
 pedantic = "warn"
@@ -171,3 +170,10 @@ precedence = { level = "allow", priority = 1 }
 manual_div_ceil = { level = "allow", priority = 1 }
 # perf-lints
 cloned_ref_to_slice_refs = { level = "allow", priority = 1 }
+
+[profile.dev]
+# Keep optimisations (and therefore inlining) disabled for the generated
+# example binaries so the compiled output mirrors the source closely.
+opt-level = 0
+debug = true
+codegen-units = 1

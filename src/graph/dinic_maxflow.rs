@@ -175,8 +175,8 @@ impl<T: Clone + Copy + Add + AddAssign + Sub<Output = T> + SubAssign + Neg + Ord
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
     #[test]
     fn small_graph() {

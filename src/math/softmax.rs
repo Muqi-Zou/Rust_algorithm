@@ -35,8 +35,8 @@ pub fn softmax(array: Vec<f32>) -> Vec<f32> {
     softmax_array
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

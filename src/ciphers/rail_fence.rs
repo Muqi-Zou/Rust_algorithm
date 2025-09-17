@@ -27,7 +27,7 @@ fn zigzag(n: usize) -> impl Iterator<Item = usize> {
     (0..n - 1).chain((1..n).rev()).cycle()
 }
 
-#[cfg(test)]
+#[cfg(any(test, feature = "bin-tests"))]
 mod test {
     use super::*;
     #[test]

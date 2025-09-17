@@ -67,8 +67,8 @@ pub fn evaluate_postfix(expression: &str) -> Result<isize, PostfixError> {
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     macro_rules! postfix_tests {

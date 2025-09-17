@@ -72,8 +72,8 @@ pub fn binary_to_hexadecimal(binary_str: &str) -> String {
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

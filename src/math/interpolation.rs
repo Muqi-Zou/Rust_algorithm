@@ -41,8 +41,8 @@ pub fn lagrange_polynomial_interpolation(x: f64, defined_points: &Vec<(f64, f64)
     sum
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
 
     use std::assert_eq;
 

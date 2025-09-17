@@ -461,8 +461,8 @@ fn rot_word(word: Word) -> Word {
     bytes_to_word(&bytes)
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

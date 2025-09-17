@@ -22,8 +22,8 @@ pub fn vector_magnitude(vec: [f64; 3]) -> f64 {
     (vec[0].powi(2) + vec[1].powi(2) + vec[2].powi(2)).sqrt()
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

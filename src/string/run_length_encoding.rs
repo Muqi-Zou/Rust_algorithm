@@ -50,8 +50,8 @@ pub fn run_length_decoding(target: &str) -> String {
     decoded_target
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     macro_rules! test_run_length {

@@ -67,8 +67,8 @@ impl<const KEY_BYTES: usize, const DIGEST_BYTES: usize, H: Hasher<DIGEST_BYTES>>
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::super::sha256::tests::get_hash_string;
     use super::super::SHA256;
     use super::HMAC;

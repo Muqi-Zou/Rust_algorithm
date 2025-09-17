@@ -34,8 +34,8 @@ pub fn baby_step_giant_step(a: usize, b: usize, n: usize) -> Option<usize> {
     None
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::baby_step_giant_step;
 
     #[test]

@@ -31,8 +31,8 @@ pub fn bucket_sort(arr: &[usize]) -> Vec<usize> {
     result
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
     use crate::sorting::have_same_elements;
     use crate::sorting::is_sorted;

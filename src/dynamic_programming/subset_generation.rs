@@ -38,8 +38,8 @@ pub fn list_subset(
 }
 
 // Test module
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

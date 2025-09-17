@@ -64,8 +64,8 @@ impl Poly1305 {
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
     use std::fmt::Write;
     fn get_tag_hex(tag: &[u8]) -> String {

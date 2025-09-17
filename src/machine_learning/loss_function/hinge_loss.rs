@@ -22,8 +22,8 @@ pub fn hng_loss(y_true: &[f64], y_pred: &[f64]) -> f64 {
     total_loss / (y_pred.len() as f64)
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

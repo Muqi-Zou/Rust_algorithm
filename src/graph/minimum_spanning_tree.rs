@@ -68,8 +68,8 @@ pub fn kruskal(mut edges: Vec<Edge>, num_vertices: usize) -> Option<(usize, Vec<
     (mst_edges.len() == num_vertices - 1).then_some((mst_cost, mst_edges))
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     macro_rules! test_cases {

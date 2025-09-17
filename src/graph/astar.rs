@@ -98,8 +98,8 @@ pub fn astar<V: Ord + Copy, E: Ord + Copy + Add<Output = E> + Zero>(
     Some((weight, path))
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::{astar, Graph};
     use num_traits::Zero;
     use std::collections::BTreeMap;

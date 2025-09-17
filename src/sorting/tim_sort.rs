@@ -109,8 +109,8 @@ pub fn tim_sort<T: Ord + Copy>(arr: &mut [T]) {
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
     use crate::sorting::{have_same_elements, is_sorted};
 

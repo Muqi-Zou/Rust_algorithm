@@ -24,8 +24,8 @@ pub fn dynamic_lucas_number(n: u32) -> u32 {
     a
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     macro_rules! test_lucas_number {

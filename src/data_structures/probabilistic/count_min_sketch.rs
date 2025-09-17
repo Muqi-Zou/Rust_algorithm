@@ -151,8 +151,8 @@ impl<Item: Hash, const WIDTH: usize, const DEPTH: usize> CountMinSketch
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use crate::data_structures::probabilistic::count_min_sketch::{
         CountMinSketch, HashCountMinSketch,
     };

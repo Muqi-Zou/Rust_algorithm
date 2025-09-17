@@ -33,8 +33,8 @@ pub fn generate_gray_code(n: usize) -> Result<Vec<String>, GrayCodeError> {
     Ok(result)
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     macro_rules! gray_code_tests {

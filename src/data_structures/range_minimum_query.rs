@@ -116,8 +116,8 @@ fn build_sparse_table<T: PartialOrd>(data: &[T]) -> Vec<Vec<usize>> {
     sparse_table
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     macro_rules! test_build_sparse_table {

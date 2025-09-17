@@ -62,8 +62,8 @@ pub fn matrix_chain_multiply(
     Ok(min_operations[0][dimensions.len() - 1])
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     macro_rules! test_cases {

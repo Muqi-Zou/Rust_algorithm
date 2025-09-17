@@ -65,8 +65,8 @@ pub fn floyd_warshall<V: Ord + Copy, E: Ord + Copy + Add<Output = E> + num_trait
     map
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::{floyd_warshall, Graph};
     use std::collections::BTreeMap;
 

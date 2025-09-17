@@ -57,8 +57,8 @@ pub fn has_cycle<T>(linked_list: &LinkedList<T>) -> bool {
     false // No cycle detected
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

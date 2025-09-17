@@ -18,8 +18,8 @@ pub fn theoretical_rot13(text: &str) -> String {
         .collect()
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

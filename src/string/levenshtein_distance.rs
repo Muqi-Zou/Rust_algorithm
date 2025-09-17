@@ -124,8 +124,8 @@ fn _min3<T: Ord>(a: T, b: T, c: T) -> T {
     min(a, min(b, c))
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     const LEVENSHTEIN_DISTANCE_TEST_CASES: &[(&str, &str, usize)] = &[
         ("", "", 0),
         ("Hello, World!", "Hello, World!", 0),

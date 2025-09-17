@@ -29,8 +29,8 @@ fn heap_recurse<T: Clone + Debug>(arr: &mut [T], k: usize, collector: &mut Vec<V
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use quickcheck_macros::quickcheck;
 
     use crate::general::permutations::heap_permute;

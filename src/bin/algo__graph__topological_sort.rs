@@ -1,0 +1,32 @@
+#![allow(warnings)]
+#![allow(clippy::all)]
+
+pub use the_algorithms_rust::graph::topological_sort as source;
+pub use source::*;
+
+fn main() {
+    let mut failures = 0usize;
+    let mut executed = 0usize;
+    const TESTS: &[(&str, fn())] = &[
+        ("it_works", source::tests::it_works as fn()),
+        ("test_wikipedia_example", source::tests::test_wikipedia_example as fn()),
+        ("test_cyclic_graph", source::tests::test_cyclic_graph as fn()),
+    ];
+    for (name, test) in TESTS {
+        let result = std::panic::catch_unwind(std::panic::AssertUnwindSafe(|| test()));
+        executed += 1;
+        match result {
+            Ok(_) => println!("[ok] {}::tests::{}", core::module_path!(), name),
+            Err(_) => {
+                println!("[failed] {}::tests::{}", core::module_path!(), name);
+                failures += 1;
+            }
+        }
+    }
+    if executed == 0 {
+        println!("No tests discovered.");
+    }
+    if failures > 0 {
+        std::process::exit(1);
+    }
+}

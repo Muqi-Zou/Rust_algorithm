@@ -182,8 +182,8 @@ fn decrypt(mut msg: String, key_order: Vec<usize>) -> String {
     decrypted_msg
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

@@ -98,7 +98,7 @@ fn from_block(block: u64) -> [u8; 8] {
     ]
 }
 
-#[cfg(test)]
+#[cfg(any(test, feature = "bin-tests"))]
 mod test {
     use super::*;
 

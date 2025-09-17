@@ -68,8 +68,8 @@ pub fn jarvis_march(points: Vec<Point>) -> Vec<Point> {
     convex_hull
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::jarvis_march;
     use super::Point;
 

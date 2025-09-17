@@ -78,7 +78,7 @@ pub fn mode<T: Eq + std::hash::Hash>(sequence: Vec<T>) -> Option<HashSet<T>> {
     )
 }
 
-#[cfg(test)]
+#[cfg(any(test, feature = "bin-tests"))]
 mod test {
     use super::*;
     #[test]

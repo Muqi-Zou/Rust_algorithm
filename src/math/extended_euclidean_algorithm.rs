@@ -20,8 +20,8 @@ pub fn extended_euclidean_algorithm(a: i32, b: i32) -> (i32, i32, i32) {
     (old_r, old_s, old_t)
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

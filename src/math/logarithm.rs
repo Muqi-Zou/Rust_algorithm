@@ -42,7 +42,7 @@ pub fn log<T: Into<f64>, U: Into<f64>>(base: U, x: T, tol: f64) -> f64 {
     }
 }
 
-#[cfg(test)]
+#[cfg(any(test, feature = "bin-tests"))]
 mod test {
     use super::*;
 

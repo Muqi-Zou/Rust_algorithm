@@ -53,8 +53,8 @@ fn check_mapping(map: &mut HashMap<char, char>, key: char, value: char) -> bool 
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::is_isomorphic;
     macro_rules! test_is_isomorphic {
         ($($name:ident: $inputs:expr,)*) => {

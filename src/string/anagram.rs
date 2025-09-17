@@ -66,8 +66,8 @@ fn char_count(s: &str) -> HashMap<char, usize> {
     res
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     macro_rules! test_cases {

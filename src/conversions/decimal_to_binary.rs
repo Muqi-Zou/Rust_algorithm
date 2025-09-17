@@ -14,8 +14,8 @@ pub fn decimal_to_binary(base_num: u64) -> String {
     bits.rev().collect()
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

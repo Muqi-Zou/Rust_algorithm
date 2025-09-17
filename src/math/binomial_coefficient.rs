@@ -31,8 +31,8 @@ pub fn binom(n: u64, k: u64) -> BigInt {
     res
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

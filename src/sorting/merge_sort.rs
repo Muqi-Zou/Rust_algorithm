@@ -55,9 +55,9 @@ pub fn bottom_up_merge_sort<T: Copy + Ord>(a: &mut [T]) {
     }
 }
 
-#[cfg(test)]
-mod tests {
-    #[cfg(test)]
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
+    #[cfg(any(test, feature = "bin-tests"))]
     mod top_down_merge_sort {
         use super::super::*;
         use crate::sorting::have_same_elements;
@@ -112,7 +112,7 @@ mod tests {
         }
     }
 
-    #[cfg(test)]
+    #[cfg(any(test, feature = "bin-tests"))]
     mod bottom_up_merge_sort {
         use super::super::*;
         use crate::sorting::have_same_elements;

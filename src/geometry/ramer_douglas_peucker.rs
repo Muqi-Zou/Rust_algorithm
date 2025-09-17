@@ -32,8 +32,8 @@ fn perpendicular_distance(p: &Point, a: &Point, b: &Point) -> f64 {
     num.abs() / den
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     macro_rules! test_perpendicular_distance {

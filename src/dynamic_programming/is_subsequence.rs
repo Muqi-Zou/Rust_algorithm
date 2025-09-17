@@ -32,8 +32,8 @@ pub fn is_subsequence(sub: &str, main: &str) -> bool {
     true
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     macro_rules! subsequence_tests {

@@ -609,8 +609,8 @@ impl<'a, K: Ord, V> Iterator for RBTreeIterator<'a, K, V> {
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::RBTree;
 
     #[test]

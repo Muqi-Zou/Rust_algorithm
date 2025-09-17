@@ -9,8 +9,8 @@ pub fn another_rot13(text: &str) -> String {
         .collect()
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     // Note this useful idiom: importing names from outer (for mod tests) scope.
     use super::*;
 

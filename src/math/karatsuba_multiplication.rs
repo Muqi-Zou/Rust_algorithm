@@ -39,7 +39,7 @@ fn normalize(mut a: String, n: usize) -> String {
     a.insert_str(0, &"0".repeat(padding));
     a
 }
-#[cfg(test)]
+#[cfg(any(test, feature = "bin-tests"))]
 mod test {
     use super::*;
 

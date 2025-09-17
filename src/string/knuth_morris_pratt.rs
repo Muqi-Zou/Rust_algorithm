@@ -100,8 +100,8 @@ fn find_pattern(
     result_indices
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     macro_rules! test_knuth_morris_pratt {

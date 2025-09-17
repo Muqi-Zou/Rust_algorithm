@@ -13,8 +13,8 @@ pub fn fast_power(mut base: usize, mut power: usize, modulus: usize) -> usize {
     res
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

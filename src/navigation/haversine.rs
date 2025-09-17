@@ -18,8 +18,8 @@ pub fn haversine(lat1: f64, lng1: f64, lat2: f64, lng2: f64) -> f64 {
     result * EARTH_RADIUS
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

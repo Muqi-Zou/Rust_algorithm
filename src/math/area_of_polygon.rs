@@ -42,8 +42,8 @@ pub fn area_of_polygon(fig: &[Point]) -> f64 {
     f64::abs(res) / 2.0
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     /**

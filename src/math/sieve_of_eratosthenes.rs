@@ -64,8 +64,8 @@ fn extract_remaining_primes(sieve: &[bool], start: usize) -> Vec<usize> {
         .collect()
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     const PRIMES_UP_TO_997: [usize; 168] = [

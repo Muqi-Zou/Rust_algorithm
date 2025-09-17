@@ -23,8 +23,8 @@ pub fn binary_to_decimal(binary: &str) -> Option<u128> {
     Some(num)
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::binary_to_decimal;
 
     #[test]

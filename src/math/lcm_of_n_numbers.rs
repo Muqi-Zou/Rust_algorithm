@@ -16,8 +16,8 @@ fn gcd_of_two_numbers(a: usize, b: usize) -> usize {
     gcd_of_two_numbers(b, a % b)
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
     #[test]
     fn it_works() {

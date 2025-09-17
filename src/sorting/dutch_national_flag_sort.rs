@@ -42,8 +42,8 @@ pub fn dutch_national_flag_sort(mut sequence: Vec<Colors>) -> Vec<Colors> {
     sequence
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::super::is_sorted;
     use super::*;
 

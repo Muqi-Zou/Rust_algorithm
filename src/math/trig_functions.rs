@@ -140,8 +140,8 @@ pub fn cotan_no_radian_arg<T: Into<f64> + Copy>(x: T, tol: f64) -> f64 {
     cotan(angle * PI / 180., tol)
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
     use std::f64::consts::PI;
 

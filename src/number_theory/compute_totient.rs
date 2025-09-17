@@ -36,8 +36,8 @@ pub fn compute_totient(n: i32) -> vec::Vec<i32> {
     phi[1..].to_vec()
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

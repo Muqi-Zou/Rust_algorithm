@@ -59,8 +59,8 @@ pub fn fast_factorial(n: usize) -> BigUint {
         .product() // we get our answer by multiplying the result
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
     use crate::math::factorial::factorial_bigmath;
 

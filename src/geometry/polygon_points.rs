@@ -43,8 +43,8 @@ pub fn lattice_points(pts: &[Pll]) -> Ll {
     area + 1 - bounds / 2
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

@@ -23,8 +23,8 @@ pub fn enumerate_graph<V: Ord + Clone>(adj: &Graph<V>) -> Vec<Vec<usize>> {
     result
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
     fn add_edge<V: Ord + Clone>(graph: &mut Graph<V>, a: V, b: V) {
         graph.entry(a.clone()).or_default().push(b.clone());

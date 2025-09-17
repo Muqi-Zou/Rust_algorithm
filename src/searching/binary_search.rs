@@ -99,8 +99,8 @@ fn is_asc_arr<T: Ord>(arr: &[T]) -> bool {
     arr.len() > 1 && arr[0] < arr[arr.len() - 1]
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     macro_rules! test_cases {

@@ -15,8 +15,8 @@ pub fn signum(number: f64) -> i8 {
     -1
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

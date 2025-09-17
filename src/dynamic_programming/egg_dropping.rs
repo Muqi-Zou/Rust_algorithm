@@ -48,8 +48,8 @@ pub fn egg_drop(eggs: usize, floors: usize) -> Option<usize> {
     Some(egg_drops[eggs][floors])
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     macro_rules! egg_drop_tests {

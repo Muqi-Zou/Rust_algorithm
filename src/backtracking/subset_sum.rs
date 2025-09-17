@@ -20,8 +20,8 @@ fn backtrack(set: &[isize], remaining_items: usize, target: isize) -> bool {
         || backtrack(set, remaining_items - 1, target - set[remaining_items - 1])
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     macro_rules! has_subset_with_sum_tests {

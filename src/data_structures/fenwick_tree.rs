@@ -195,8 +195,8 @@ const fn lowbit(x: usize) -> usize {
     x & (!x + 1)
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

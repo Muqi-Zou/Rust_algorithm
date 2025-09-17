@@ -112,8 +112,8 @@ fn closest_points_aux(
     Some(pair)
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::closest_points;
     use super::Point;
 

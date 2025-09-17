@@ -22,8 +22,8 @@ pub fn mse_loss(predicted: &[f64], actual: &[f64]) -> f64 {
     total_loss / (predicted.len() as f64)
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

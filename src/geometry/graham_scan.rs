@@ -81,8 +81,8 @@ pub fn graham_scan(mut points: Vec<Point>) -> Vec<Point> {
     convex_hull
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::graham_scan;
     use super::Point;
 

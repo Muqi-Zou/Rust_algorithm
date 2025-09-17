@@ -6,8 +6,8 @@ pub fn xor(text: &str, key: u8) -> Vec<u8> {
     xor_bytes(text.as_bytes(), key)
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

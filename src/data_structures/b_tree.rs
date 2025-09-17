@@ -160,7 +160,7 @@ where
     }
 }
 
-#[cfg(test)]
+#[cfg(any(test, feature = "bin-tests"))]
 mod test {
     use super::BTree;
 

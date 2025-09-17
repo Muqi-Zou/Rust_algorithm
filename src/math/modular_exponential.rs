@@ -83,8 +83,8 @@ pub fn modular_exponential(base: i64, mut power: i64, modulus: i64) -> i64 {
     result
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

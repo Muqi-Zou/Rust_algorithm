@@ -1,9 +1,9 @@
-mod cholesky;
-mod k_means;
-mod linear_regression;
-mod logistic_regression;
-mod loss_function;
-mod optimization;
+pub mod cholesky;
+pub mod k_means;
+pub mod linear_regression;
+pub mod logistic_regression;
+pub mod loss_function;
+pub mod optimization;
 
 pub use self::cholesky::cholesky;
 pub use self::k_means::k_means;

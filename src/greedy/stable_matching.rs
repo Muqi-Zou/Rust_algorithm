@@ -137,8 +137,8 @@ pub fn stable_matching(
     finalize_matches(man_engaged)
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
     use std::collections::HashMap;
 

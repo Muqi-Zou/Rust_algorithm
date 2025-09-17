@@ -77,8 +77,8 @@ fn permute_recurse_unique<T: Clone + Debug + Eq + Hash + Copy>(
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use crate::general::permutations::naive::{permute, permute_unique};
     use crate::general::permutations::tests::{
         assert_permutations, assert_valid_permutation, NotTooBigVec,

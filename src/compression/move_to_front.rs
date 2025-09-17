@@ -33,7 +33,7 @@ pub fn move_to_front_decode(encoded: &[u8]) -> String {
     result
 }
 
-#[cfg(test)]
+#[cfg(any(test, feature = "bin-tests"))]
 mod test {
     use super::*;
 

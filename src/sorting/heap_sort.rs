@@ -78,8 +78,8 @@ pub fn heap_sort<T: Ord>(arr: &mut [T], ascending: bool) {
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use crate::sorting::{have_same_elements, heap_sort, is_descending_sorted, is_sorted};
 
     macro_rules! test_heap_sort {

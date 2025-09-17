@@ -1,13 +1,13 @@
-mod all_combination_of_size_k;
-mod graph_coloring;
-mod hamiltonian_cycle;
-mod knight_tour;
-mod n_queens;
-mod parentheses_generator;
-mod permutations;
-mod rat_in_maze;
-mod subset_sum;
-mod sudoku;
+pub(crate) mod all_combination_of_size_k;
+pub(crate) mod graph_coloring;
+pub(crate) mod hamiltonian_cycle;
+pub(crate) mod knight_tour;
+pub(crate) mod n_queens;
+pub(crate) mod parentheses_generator;
+pub(crate) mod permutations;
+pub(crate) mod rat_in_maze;
+pub(crate) mod subset_sum;
+pub(crate) mod sudoku;
 
 pub use all_combination_of_size_k::generate_all_combinations;
 pub use graph_coloring::generate_colorings;

@@ -45,8 +45,8 @@ pub fn greatest_common_divisor_stein(a: u64, b: u64) -> u64 {
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

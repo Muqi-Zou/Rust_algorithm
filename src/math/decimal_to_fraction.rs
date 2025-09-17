@@ -31,8 +31,8 @@ pub fn decimal_to_fraction(decimal: f64) -> (i64, i64) {
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

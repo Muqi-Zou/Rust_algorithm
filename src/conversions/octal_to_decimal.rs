@@ -19,8 +19,8 @@ pub fn octal_to_decimal(octal_str: &str) -> Result<u64, &'static str> {
     u64::from_str_radix(octal_str, 8).map_err(|_| "Conversion error")
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

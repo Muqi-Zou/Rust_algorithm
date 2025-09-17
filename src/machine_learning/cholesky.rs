@@ -30,8 +30,8 @@ pub fn cholesky(mat: Vec<f64>, n: usize) -> Vec<f64> {
     res
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

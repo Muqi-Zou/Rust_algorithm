@@ -21,8 +21,8 @@ pub fn get_mersenne_primes(limit: usize) -> Vec<usize> {
     results
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::{get_mersenne_primes, is_mersenne_prime};
 
     #[test]

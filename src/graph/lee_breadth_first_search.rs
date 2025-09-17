@@ -54,8 +54,8 @@ pub fn lee(matrix: Vec<Vec<i32>>, source: (usize, usize), destination: (usize, u
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
     #[test]
     fn test_lee_exists() {

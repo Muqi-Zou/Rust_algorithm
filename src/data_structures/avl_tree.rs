@@ -321,8 +321,8 @@ impl<'a, T: Ord> Iterator for Iter<'a, T> {
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::AVLTree;
 
     /// Returns `true` if all nodes in the tree are balanced.

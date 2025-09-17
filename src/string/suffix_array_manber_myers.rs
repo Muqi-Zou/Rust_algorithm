@@ -53,8 +53,8 @@ pub fn generate_suffix_array_manber_myers(input: &str) -> Vec<usize> {
     suffix_array
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

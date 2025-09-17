@@ -11,8 +11,8 @@ pub fn reverse(text: &str) -> String {
     text.chars().rev().collect()
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     macro_rules! test_cases {

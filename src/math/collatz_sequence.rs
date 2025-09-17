@@ -16,8 +16,8 @@ pub fn sequence(mut n: usize) -> Option<Vec<usize>> {
     Some(list)
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::sequence;
 
     #[test]

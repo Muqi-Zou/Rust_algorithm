@@ -26,8 +26,8 @@ fn get_prime_limit(num: usize) -> usize {
     (((num * 8 + 1) as f64).log2() as usize) / 2_usize
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

@@ -36,8 +36,8 @@ pub fn exponential_linear_unit(vector: &Vec<f64>, alpha: f64) -> Vec<f64> {
     _vector
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

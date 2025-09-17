@@ -62,8 +62,8 @@ pub fn is_isogram(s: &str) -> Result<bool, IsogramError> {
     Ok(letter_counts.values().all(|&count| count == 1))
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     macro_rules! isogram_tests {

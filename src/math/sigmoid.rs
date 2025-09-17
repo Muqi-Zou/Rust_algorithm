@@ -19,8 +19,8 @@ pub fn sigmoid(array: &mut Vec<f32>) -> &mut Vec<f32> {
     array
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

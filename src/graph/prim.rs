@@ -57,8 +57,8 @@ pub fn prim_with_start<V: Ord + Copy, E: Ord + Add + Copy>(
     mst
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::{add_edge, prim, Graph};
     use std::collections::BTreeMap;
 

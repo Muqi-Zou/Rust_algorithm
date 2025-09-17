@@ -92,8 +92,8 @@ impl From<(u32, u32)> for Edge {
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     /* Example graph #1:

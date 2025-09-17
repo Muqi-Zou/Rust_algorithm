@@ -51,8 +51,8 @@ pub fn dijkstra<V: Ord + Copy, E: Ord + Copy + Add<Output = E>>(
     ans
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::{dijkstra, Graph};
     use std::collections::BTreeMap;
 

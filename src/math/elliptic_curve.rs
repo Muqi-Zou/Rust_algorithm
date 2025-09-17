@@ -251,8 +251,8 @@ impl<F: Field + Hash, const A: i64, const B: i64> Hash for EllipticCurve<F, A, B
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use std::collections::HashSet;
     use std::time::Instant;
 

@@ -21,8 +21,8 @@ pub fn kld_loss(actual: &[f64], predicted: &[f64]) -> f64 {
     loss
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

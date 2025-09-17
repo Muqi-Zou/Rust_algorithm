@@ -83,8 +83,8 @@ pub fn intro_sort<T: Ord>(arr: &mut [T]) {
     intro_sort_recursive(arr, max_depth);
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

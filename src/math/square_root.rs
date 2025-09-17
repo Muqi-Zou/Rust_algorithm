@@ -33,8 +33,8 @@ pub fn fast_inv_sqrt(num: f32) -> f32 {
     // The above can be repeated for more precision
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

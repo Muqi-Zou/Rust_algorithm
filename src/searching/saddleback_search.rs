@@ -32,8 +32,8 @@ pub fn saddleback_search(matrix: &[Vec<i32>], element: i32) -> (usize, usize) {
     (0, 0)
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     // Test when the element is not present in the matrix

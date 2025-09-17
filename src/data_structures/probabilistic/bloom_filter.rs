@@ -162,8 +162,8 @@ impl<Item: Hash> BloomFilter<Item> for MultiBinaryBloomFilter {
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use crate::data_structures::probabilistic::bloom_filter::{
         BasicBloomFilter, BloomFilter, MultiBinaryBloomFilter, SingleBinaryBloomFilter,
     };

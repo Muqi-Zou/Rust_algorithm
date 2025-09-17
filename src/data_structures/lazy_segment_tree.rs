@@ -122,8 +122,8 @@ impl<T: Debug + Default + Ord + Copy + Display + AddAssign + Add<Output = T>> La
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
     use quickcheck::TestResult;
     use quickcheck_macros::quickcheck;

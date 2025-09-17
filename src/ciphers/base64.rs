@@ -96,8 +96,8 @@ pub fn base64_decode(data: &str) -> Result<Vec<u8>, (&str, u8)> {
     Ok(outputbytes)
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

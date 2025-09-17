@@ -65,8 +65,8 @@ pub fn topological_sort<Node: Hash + Eq + Copy>(
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::topological_sort;
     use crate::graph::topological_sort::TopoligicalSortError;
 

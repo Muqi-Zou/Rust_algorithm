@@ -191,8 +191,8 @@ pub fn tonelli_shanks(a: i64, odd_prime: u64) -> Option<u64> {
     Some(x as u64)
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     fn tonelli_shanks_residues(x: u64, odd_prime: u64) -> Option<(u64, u64)> {

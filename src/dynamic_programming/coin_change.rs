@@ -45,8 +45,8 @@ pub fn coin_change(coins: &[usize], amount: usize) -> Option<usize> {
     min_coins[amount]
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     macro_rules! coin_change_tests {

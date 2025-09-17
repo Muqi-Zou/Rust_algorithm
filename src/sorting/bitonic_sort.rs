@@ -25,8 +25,8 @@ pub fn bitonic_sort<T: Ord>(array: &mut [T], low: usize, length: usize, ascendin
 }
 
 //Note that this program works only when size of input is a power of 2.
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
     use crate::sorting::have_same_elements;
     use crate::sorting::is_descending_sorted;

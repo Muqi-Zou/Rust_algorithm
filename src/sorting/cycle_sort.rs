@@ -31,8 +31,8 @@ pub fn cycle_sort(arr: &mut [i32]) {
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
 
     use super::*;
     use crate::sorting::have_same_elements;

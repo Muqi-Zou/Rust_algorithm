@@ -51,8 +51,8 @@ fn search(trie: &Trie<char, bool>, s: &str, start: usize, memo: &mut Vec<Option<
     false
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     macro_rules! test_cases {

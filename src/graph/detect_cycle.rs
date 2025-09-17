@@ -165,7 +165,7 @@ impl DetectCycle for DirectedGraph {
     }
 }
 
-#[cfg(test)]
+#[cfg(any(test, feature = "bin-tests"))]
 mod test {
     use super::DetectCycle;
     use crate::data_structures::{graph::Graph, DirectedGraph, UndirectedGraph};

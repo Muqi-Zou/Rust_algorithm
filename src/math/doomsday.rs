@@ -21,8 +21,8 @@ pub fn get_week_day(y: i32, m: i32, d: i32) -> String {
     day_str.to_string()
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

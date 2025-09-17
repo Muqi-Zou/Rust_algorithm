@@ -29,7 +29,7 @@ pub fn linear_regression(data_points: Vec<(f64, f64)>) -> Option<(f64, f64)> {
     Some((a, b))
 }
 
-#[cfg(test)]
+#[cfg(any(test, feature = "bin-tests"))]
 mod test {
     use super::*;
 

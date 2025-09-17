@@ -114,7 +114,7 @@ pub trait Graph {
     }
 }
 
-#[cfg(test)]
+#[cfg(any(test, feature = "bin-tests"))]
 mod test_undirected_graph {
     use super::Graph;
     use super::UndirectedGraph;
@@ -154,7 +154,7 @@ mod test_undirected_graph {
     }
 }
 
-#[cfg(test)]
+#[cfg(any(test, feature = "bin-tests"))]
 mod test_directed_graph {
     use super::DirectedGraph;
     use super::Graph;

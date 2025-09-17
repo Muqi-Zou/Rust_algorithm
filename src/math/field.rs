@@ -223,8 +223,8 @@ fn mod_inverse(mut a: i64, mut b: i64) -> i64 {
     a * s
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use std::collections::HashSet;
 
     use super::*;

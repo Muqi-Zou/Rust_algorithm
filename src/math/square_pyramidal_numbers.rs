@@ -5,8 +5,8 @@ pub fn square_pyramidal_number(n: u64) -> u64 {
     n * (n + 1) * (2 * n + 1) / 6
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
 
     use super::*;
 

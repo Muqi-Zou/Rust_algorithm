@@ -103,8 +103,8 @@ pub fn chacha20(input: &[u32; 16], output: &mut [u32; 16]) {
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
     use std::fmt::Write;
 

@@ -49,7 +49,7 @@ pub fn generic_counting_sort<T: Into<u64> + From<u8> + AddAssign + Copy>(
     }
 }
 
-#[cfg(test)]
+#[cfg(any(test, feature = "bin-tests"))]
 mod test {
     use super::*;
     use crate::sorting::have_same_elements;

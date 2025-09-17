@@ -50,8 +50,8 @@ pub fn baconian_decode(encoded: &str) -> String {
         .collect()
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

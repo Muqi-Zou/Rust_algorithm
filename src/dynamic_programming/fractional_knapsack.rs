@@ -31,8 +31,8 @@ pub fn fractional_knapsack(mut capacity: f64, weights: Vec<f64>, values: Vec<f64
     knapsack_value
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

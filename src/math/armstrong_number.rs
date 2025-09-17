@@ -17,8 +17,8 @@ pub fn is_armstrong_number(number: u32) -> bool {
     sum_nth_power_of_digits == number
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

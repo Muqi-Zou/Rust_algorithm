@@ -50,7 +50,7 @@ pub fn length_conversion(input: f64, from: LengthUnit, to: LengthUnit) -> f64 {
     meter_to_unit(unit_to_meter(input, from), to)
 }
 
-#[cfg(test)]
+#[cfg(any(test, feature = "bin-tests"))]
 mod length_conversion_tests {
     use std::collections::HashMap;
 

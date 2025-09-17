@@ -158,8 +158,8 @@ fn has_cycle(
     false
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use std::collections::HashSet;
 
     // test forest (remember the assumptoin that roots are adjacent to themselves)

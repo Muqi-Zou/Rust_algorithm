@@ -18,8 +18,8 @@ pub fn bearing(lat1: f64, lng1: f64, lat2: f64, lng2: f64) -> f64 {
     (brng + 360.0) % 360.0
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

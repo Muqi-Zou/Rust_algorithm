@@ -205,7 +205,7 @@ impl super::Hasher<32> for SHA256 {
     }
 }
 
-#[cfg(test)]
+#[cfg(any(test, feature = "bin-tests"))]
 pub mod tests {
     use super::*;
     use crate::math::LinearSieve;

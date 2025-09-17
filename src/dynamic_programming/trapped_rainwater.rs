@@ -62,8 +62,8 @@ fn create_iter(len: usize, reverse: bool) -> Box<dyn Iterator<Item = usize>> {
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     macro_rules! trapped_rainwater_tests {

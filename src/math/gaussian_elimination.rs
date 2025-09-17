@@ -57,8 +57,8 @@ fn eliminate(matrix: &mut [Vec<f32>], i: usize) {
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::gaussian_elimination;
 
     #[test]

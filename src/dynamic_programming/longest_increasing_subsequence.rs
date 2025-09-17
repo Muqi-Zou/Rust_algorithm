@@ -45,8 +45,8 @@ pub fn longest_increasing_subsequence<T: Ord + Clone>(input_array: &[T]) -> Vec<
     out.into_iter().rev().collect()
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::longest_increasing_subsequence;
 
     #[test]

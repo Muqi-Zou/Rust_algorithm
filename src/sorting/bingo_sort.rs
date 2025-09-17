@@ -42,8 +42,8 @@ fn print_array(arr: &[i32]) {
     println!();
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

@@ -23,7 +23,7 @@ pub fn stooge_sort<T: Ord>(arr: &mut [T]) {
     _stooge_sort(arr, 0, len - 1);
 }
 
-#[cfg(test)]
+#[cfg(any(test, feature = "bin-tests"))]
 mod test {
     use super::*;
     use crate::sorting::have_same_elements;

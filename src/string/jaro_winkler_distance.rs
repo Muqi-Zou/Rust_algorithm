@@ -62,8 +62,8 @@ pub fn jaro_winkler_distance(str1: &str, str2: &str) -> f64 {
     jaro + (0.1 * prefix_len * (1.0 - jaro))
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

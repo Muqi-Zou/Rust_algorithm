@@ -27,8 +27,8 @@ pub fn binary_insertion_sort<T: Ord + Clone>(arr: &mut [T]) {
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

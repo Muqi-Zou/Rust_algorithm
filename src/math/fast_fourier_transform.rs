@@ -166,8 +166,8 @@ pub fn inverse_fast_fourier_transform(
     result.iter().map(|x| x.re * scale).collect()
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
     fn almost_equal(a: f64, b: f64, epsilon: f64) -> bool {
         (a - b).abs() < epsilon

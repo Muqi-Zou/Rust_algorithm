@@ -19,8 +19,8 @@ pub mod searching;
 pub mod sorting;
 pub mod string;
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::sorting;
     #[test]
     fn quick_sort() {

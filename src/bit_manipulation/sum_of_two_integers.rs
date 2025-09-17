@@ -24,8 +24,8 @@ pub fn add_two_integers(mut a: isize, mut b: isize) -> isize {
     a
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     macro_rules! test_add_two_integers {

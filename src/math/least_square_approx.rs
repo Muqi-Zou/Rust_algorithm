@@ -55,8 +55,8 @@ pub fn least_square_approx<T: Into<f64> + Copy, U: Into<f64> + Copy>(
     }
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

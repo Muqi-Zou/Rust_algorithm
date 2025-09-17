@@ -25,8 +25,8 @@ pub fn sum_of_harmonic_progression(
     harmonic_series.iter().sum()
 }
 
-#[cfg(test)]
-mod tests {
+#[cfg(any(test, feature = "bin-tests"))]
+pub(crate) mod tests {
     use super::*;
 
     #[test]

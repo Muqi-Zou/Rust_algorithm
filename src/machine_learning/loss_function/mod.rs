@@ -1,10 +1,10 @@
-mod average_margin_ranking_loss;
-mod hinge_loss;
-mod huber_loss;
-mod kl_divergence_loss;
-mod mean_absolute_error_loss;
-mod mean_squared_error_loss;
-mod negative_log_likelihood;
+pub(crate) mod average_margin_ranking_loss;
+pub(crate) mod hinge_loss;
+pub(crate) mod huber_loss;
+pub(crate) mod kl_divergence_loss;
+pub(crate) mod mean_absolute_error_loss;
+pub(crate) mod mean_squared_error_loss;
+pub(crate) mod negative_log_likelihood;
 
 pub use self::average_margin_ranking_loss::average_margin_ranking_loss;
 pub use self::hinge_loss::hng_loss;

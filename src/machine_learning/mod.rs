@@ -1,9 +1,9 @@
-mod cholesky;
-mod k_means;
-mod linear_regression;
-mod logistic_regression;
-mod loss_function;
-mod optimization;
+pub(crate) mod cholesky;
+pub(crate) mod k_means;
+pub(crate) mod linear_regression;
+pub(crate) mod logistic_regression;
+pub(crate) mod loss_function;
+pub(crate) mod optimization;
 
 pub use self::cholesky::cholesky;
 pub use self::k_means::k_means;
